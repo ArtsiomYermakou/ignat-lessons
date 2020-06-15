@@ -1,0 +1,6 @@
+.name a {
+    text-decoration: none;
+}
+.name {
+    grid-area: n;
+}

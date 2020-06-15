@@ -1,0 +1,6 @@
+.time {
+    grid-area: t;
+    margin-top: 16px;
+    font-size: 12px;
+    margin-left: 10px;
+}
