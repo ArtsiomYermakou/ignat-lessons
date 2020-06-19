@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, {ChangeEvent, KeyboardEvent, useState} from "react";
+
 
 type PropsType = {
     title: string
@@ -7,6 +8,24 @@ type PropsType = {
 }
 export function Task3(props: PropsType) {
     const [name, setName] = useState("");
+
+
+    const onKeyPressEnter = (e:KeyboardEvent<HTMLInputElement>) => {
+            if (e.charCode === 13 && name.trim() !== "") {
+                props.addName(name)
+                alert("Привет, " + name + " !")
+                setName("");
+            }
+        }
+    const onClickForButton = () => {
+        if (name.trim() !== "") {
+            props.addName(name)
+            alert("Привет, " + name + " !")
+            setName("");
+        }
+    }
+    const setNameEvent = (e:ChangeEvent<HTMLInputElement>) => {setName(e.currentTarget.value)}
+
     return (
         <div>
             <div>
@@ -16,23 +35,10 @@ export function Task3(props: PropsType) {
                 Привет, введи своё имя: <br/>
                 <input value={name}
                        placeholder="Имя"
-                       onChange={(e) => {
-                           setName(e.currentTarget.value)
-                       }}
-                       onKeyPress={(e) => {
-                           if (e.charCode === 13 && name.trim() !== "") {
-                               props.addName(name)
-                               alert("Привет, " + name + " !")
-                               setName("");
-                           }
-                       }}/>
-                <button onClick={() => {
-                    if (name.trim() !== "") {
-                        props.addName(name)
-                        alert("Привет, " + name + " !")
-                        setName("");
-                    }
-                }}>Добавить</button>
+                       onChange={setNameEvent}
+                       onKeyPress={onKeyPressEnter}/>
+
+                <button onClick={onClickForButton}>Добавить</button>
                 <br/>
                 <span>
                     Количество имён в массиве: {props.arrayName.length}
