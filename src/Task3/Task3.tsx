@@ -6,6 +6,7 @@ type PropsType = {
     addName: (name: string) => void
     arrayName: Array<any>
 }
+
 export function Task3(props: PropsType) {
     const [name, setName] = useState("");
 

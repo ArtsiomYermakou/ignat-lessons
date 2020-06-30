@@ -16,9 +16,17 @@ import './App.css';
 // import {AffairsType, MyAffairs} from "./MyAffairs/MyAffairs";
 
 //  3 ЗАДАНИЕ ИМПОРТЫ
-import {Task3} from "./Task3/Task3";
+// import {Task3} from "./Task3/Task3";
+// import {v1} from "uuid";
+// import s from "./Task3/Task3.module.css"
+
+
+//  4 ЗАДАНИЕ ИМПОРТЫ
+import {Task4} from "./Task4/Task4";
 import {v1} from "uuid";
 import s from "./Task3/Task3.module.css"
+
+
 
 
 // 1 задание
@@ -91,6 +99,40 @@ import s from "./Task3/Task3.module.css"
 // }
 
 // 3. Задание
+// type NameType =  {
+//     name: string,
+//     id: string
+// }
+//
+// function App() {
+//     let [arr, setArr] = useState<Array<NameType>>([]);
+//     function addName(name: string) {
+//         let newName = {id: v1(), name: name };
+//         let newNames = [newName, ...arr];
+//         setArr(newNames);
+//         console.log(arr);
+//     }
+//     return(
+//         <div className={s.App}>
+//             <Task3 title="ЗАДАНИЕ 3"
+//                    addName={addName}
+//                    arrayName={arr}
+//
+//             />
+//         </div>
+//     )
+// }
+
+
+
+
+
+
+
+
+
+// 4. Задание
+
 type NameType =  {
     name: string,
     id: string
@@ -106,13 +148,15 @@ function App() {
     }
     return(
         <div className={s.App}>
-            <Task3 title="ЗАДАНИЕ 3"
+            <Task4 title="ЗАДАНИЕ 4"
                    addName={addName}
                    arrayName={arr}
-
             />
         </div>
     )
 }
+
+
+
 
 export default App;
