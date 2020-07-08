@@ -1,8 +1,9 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from "react";
 import s from "./Task4.module.css"
+import {CheckboxCustom} from "../common/Checkbox";
+import {Button, TextField} from "@material-ui/core";
 import {InputCustom} from "../common/InputCustom";
 import {ButtonCustom} from "../common/ButtonCustom";
-import {CheckboxCustom} from "../common/Checkbox";
 
 
 type PropsType = {
@@ -15,13 +16,13 @@ export function Task4(props: PropsType) {
     const [name, setName] = useState("");
 
 
-    const onKeyPressEnter = (e:KeyboardEvent<HTMLInputElement>) => {
-            if (e.charCode === 13 && name.trim() !== "") {
-                props.addName(name)
-                alert("Привет, " + name + " !")
-                setName("");
-            }
+    const onKeyPressEnter = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.charCode === 13 && name.trim() !== "") {
+            props.addName(name)
+            alert("Привет, " + name + " !")
+            setName("");
         }
+    }
     const onClickForButton = () => {
         if (name.trim() !== "") {
             props.addName(name)
@@ -29,9 +30,11 @@ export function Task4(props: PropsType) {
             setName("");
         }
     }
-    const setNameEvent = (e:ChangeEvent<HTMLInputElement>) => {
+    const setNameEvent = (e: ChangeEvent<HTMLInputElement>) => {
         setName(e.currentTarget.value)
     }
+
+
 
     return (
         <div>
@@ -41,39 +44,17 @@ export function Task4(props: PropsType) {
             <div>
                 Привет, введи своё имя: <br/>
 
-
-
                 <InputCustom value={name}
-                       placeholder="Имя"
                        onChange={setNameEvent}
                        onKeyPress={onKeyPressEnter}/>
 
-
-
-
-                <ButtonCustom onClick={onClickForButton}>Добавить</ButtonCustom>
+                <ButtonCustom onClick={onClickForButton}/>
                 <br/>
                 <span>
                     Количество имён в массиве: <span className={s.numb}>{props.arrayName.length}</span>
                 </span>
                 <br/>
-                <CheckboxCustom />
-
-
-                {/*=====================================*/}
-                {/*<br/>*/}
-                {/*<TextField id="outlined-basic" label="Имя" variant="outlined" />*/}
-
-                {/*<br/>*/}
-                {/*<Button variant="contained" color="primary">*/}
-                {/*    Кнопка*/}
-                {/*</Button>*/}
-
-                {/*<br/>*/}
-                {/*<Checkbox*/}
-                {/*    inputProps={{ 'aria-label': 'primary checkbox' }}*/}
-                {/*/>*/}
-                {/*<InputCustom />*/}
+                <CheckboxCustom/>
             </div>
         </div>
     )

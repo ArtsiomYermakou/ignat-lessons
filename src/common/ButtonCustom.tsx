@@ -1,13 +1,18 @@
 import {Button} from "@material-ui/core";
 import React from "react";
 
-export const ButtonCustom = (props:any) => {
-    return (
-        <div>
-            <Button
-                variant="contained" color="primary">
+type ButtonCustomType = {
+    onClick: () => void
+}
+
+export const ButtonCustom = (props:ButtonCustomType) => {
+    return <Button
+                variant="contained"
+                color="primary"
+                onClick={props.onClick}
+
+    >
+
                 Добавить
             </Button>
-        </div>
-    )
 }
