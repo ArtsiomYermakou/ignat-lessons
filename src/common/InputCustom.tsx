@@ -16,4 +16,3 @@ export const InputCustom = (props: InputCustomType) => {
                       onKeyPress={props.onKeyPress}
     />
 }
-

@@ -3,16 +3,12 @@ import React from "react";
 
 type ButtonCustomType = {
     onClick: () => void
+    title: string
 }
 
 export const ButtonCustom = (props:ButtonCustomType) => {
     return <Button
                 variant="contained"
                 color="primary"
-                onClick={props.onClick}
-
-    >
-
-                Добавить
-            </Button>
+                onClick={props.onClick}>{props.title}</Button>
 }

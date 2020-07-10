@@ -48,7 +48,7 @@ export function Task4(props: PropsType) {
                        onChange={setNameEvent}
                        onKeyPress={onKeyPressEnter}/>
 
-                <ButtonCustom onClick={onClickForButton}/>
+                <ButtonCustom onClick={onClickForButton} title={"Добавить"}/>
                 <br/>
                 <span>
                     Количество имён в массиве: <span className={s.numb}>{props.arrayName.length}</span>
