@@ -1,6 +1,7 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from "react";
 
 
+
 type PropsType = {
     title: string
     addName: (name: string) => void
@@ -11,13 +12,13 @@ export function Task3(props: PropsType) {
     const [name, setName] = useState("");
 
 
-    const onKeyPressEnter = (e:KeyboardEvent<HTMLInputElement>) => {
-            if (e.charCode === 13 && name.trim() !== "") {
-                props.addName(name)
-                alert("Привет, " + name + " !")
-                setName("");
-            }
+    const onKeyPressEnter = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.charCode === 13 && name.trim() !== "") {
+            props.addName(name)
+            alert("Привет, " + name + " !")
+            setName("");
         }
+    }
     const onClickForButton = () => {
         if (name.trim() !== "") {
             props.addName(name)
@@ -25,7 +26,9 @@ export function Task3(props: PropsType) {
             setName("");
         }
     }
-    const setNameEvent = (e:ChangeEvent<HTMLInputElement>) => {setName(e.currentTarget.value)}
+    const setNameEvent = (e: ChangeEvent<HTMLInputElement>) => {
+        setName(e.currentTarget.value)
+    }
 
     return (
         <div>
@@ -35,9 +38,10 @@ export function Task3(props: PropsType) {
             <div>
                 Привет, введи своё имя: <br/>
                 <input value={name}
-                       placeholder="Имя"
-                       onChange={setNameEvent}
-                       onKeyPress={onKeyPressEnter}/>
+                           placeholder="Имя"
+                           onChange={setNameEvent}
+                           onKeyPress={onKeyPressEnter}
+                />
 
                 <button onClick={onClickForButton}>Добавить</button>
                 <br/>

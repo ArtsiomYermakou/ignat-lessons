@@ -1,0 +1,27 @@
+.container {
+    display: block;
+    position: fixed;
+    list-style:none;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 200px;
+    background-color: #eee;
+    height: 100%;
+    top: 0;
+    transition: left .2s;
+    z-index: 2;
+}
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.div{
+    padding: 10px;
+}
+.isActive{
+    text-decoration: none;
+    color: green;
+    font-size: 20px;
+}
