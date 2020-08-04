@@ -1,5 +1,5 @@
 import React from "react";
-import "../Task5/CSS.css"
+import ".//CSS.css"
 import {NavLink} from "react-router-dom";
 import styles from './Navbar.module.css'
 

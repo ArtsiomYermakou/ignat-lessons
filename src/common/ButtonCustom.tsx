@@ -8,8 +8,5 @@ type ButtonCustomType = {
 }
 
 export const ButtonCustom = (props:ButtonCustomType) => {
-    return <Button
-                variant="contained"
-                color="primary"
-                onClick={props.onClick}>{props.title}</Button>
+    return <Button variant="contained" color="primary" onClick={props.onClick}>{props.title}</Button>
 }

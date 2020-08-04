@@ -1,8 +1,7 @@
 import React from 'react';
-import {FilterValue} from "../App";
 import s from "./MyAffairs.module.css"
 import {Button, ButtonGroup} from "@material-ui/core";
-import {ButtonCustom} from "../common/ButtonCustom";
+import {FilterValue} from "./Task2";
 
 export type AffairsType = {
     id: number
@@ -19,6 +18,7 @@ type PropsType = {
 
 
 function MyAffairs(props: PropsType) {
+
     return (
         <div className={s.back}>
             <div className={s.main}>
