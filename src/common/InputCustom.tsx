@@ -4,7 +4,7 @@ import React, {ChangeEvent, KeyboardEvent} from "react";
 type InputCustomType = {
     value: string
     onChange: (e: ChangeEvent<HTMLInputElement>) => void
-    onKeyPress: (e: KeyboardEvent<HTMLInputElement>) => void
+    onKeyPress?: (e: KeyboardEvent<HTMLInputElement>) => void
 }
 
 export const InputCustom = (props: InputCustomType) => {

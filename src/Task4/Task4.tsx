@@ -45,7 +45,7 @@ export function Task4(props: PropsType) {
 
                 <InputCustom value={name}
                        onChange={setNameEvent}
-                       onKeyPress={onKeyPressEnter}/>
+                       onKeyPress={onKeyPressEnter} />
 
                 <ButtonCustom onClick={onClickForButton} title={"Добавить"}/>
                 <br/>

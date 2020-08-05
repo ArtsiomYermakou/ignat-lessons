@@ -8,7 +8,7 @@ import JuniorPlus from "./Task5JunPrejunJun+/JuniorPlus";
 import {HashRouter, Route} from "react-router-dom";
 import Navbar from "./Task5JunPrejunJun+/Navbar";
 
-function App() {
+function App () {
 
     const [isHidden, setIsHidden] = useState(false)
 

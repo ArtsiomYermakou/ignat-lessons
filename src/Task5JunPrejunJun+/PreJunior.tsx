@@ -9,7 +9,7 @@ function PreJunior() {
     return (
         <div>
             <h1>PreJunior</h1>
-                <Task1 />
+            <Task1/>
             <hr/>
             <div>
                 <h3>Task2</h3>
