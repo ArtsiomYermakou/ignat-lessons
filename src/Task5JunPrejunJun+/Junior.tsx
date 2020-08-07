@@ -44,6 +44,7 @@ function Junior() {
                               changeValueInput={changeValueInput}
                               onEditMode={onEditMode}
                               onKeyPressEnter={onKeyPressEnter}
+                              offEditMode={offEditMode}
 
                 />
             </div>

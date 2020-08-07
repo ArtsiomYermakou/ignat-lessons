@@ -7,6 +7,7 @@ type EditableSpanType = {
     changeValueInput: (e: ChangeEvent<HTMLInputElement>) => void
     onEditMode: () => void
     onKeyPressEnter: (e: KeyboardEvent<HTMLInputElement>) => void
+    offEditMode: () => void
 }
 
 
@@ -42,6 +43,7 @@ const EditableSpan = (props: EditableSpanType) => {
                 color="secondary"
                 label={"Введите значение"}
                 autoFocus={true}
+                onBlur={props.offEditMode}
             />
             : <span onDoubleClick={props.onEditMode}>{props.value}</span>
     )
