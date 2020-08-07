@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ignat-lessons/static/css/main.96383eaf.chunk.css",
-    "main.js": "/ignat-lessons/static/js/main.003b7325.chunk.js",
-    "main.js.map": "/ignat-lessons/static/js/main.003b7325.chunk.js.map",
+    "main.js": "/ignat-lessons/static/js/main.121e408f.chunk.js",
+    "main.js.map": "/ignat-lessons/static/js/main.121e408f.chunk.js.map",
     "runtime-main.js": "/ignat-lessons/static/js/runtime-main.cef60b5e.js",
     "runtime-main.js.map": "/ignat-lessons/static/js/runtime-main.cef60b5e.js.map",
     "static/js/2.e6cf90bb.chunk.js": "/ignat-lessons/static/js/2.e6cf90bb.chunk.js",
     "static/js/2.e6cf90bb.chunk.js.map": "/ignat-lessons/static/js/2.e6cf90bb.chunk.js.map",
     "index.html": "/ignat-lessons/index.html",
-    "precache-manifest.aa35b78fa0042a0d35e663225ee5cb9b.js": "/ignat-lessons/precache-manifest.aa35b78fa0042a0d35e663225ee5cb9b.js",
+    "precache-manifest.fabdacd70f4ac818dd6d6d60393d990f.js": "/ignat-lessons/precache-manifest.fabdacd70f4ac818dd6d6d60393d990f.js",
     "service-worker.js": "/ignat-lessons/service-worker.js",
     "static/css/main.96383eaf.chunk.css.map": "/ignat-lessons/static/css/main.96383eaf.chunk.css.map",
     "static/js/2.e6cf90bb.chunk.js.LICENSE.txt": "/ignat-lessons/static/js/2.e6cf90bb.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.cef60b5e.js",
     "static/js/2.e6cf90bb.chunk.js",
     "static/css/main.96383eaf.chunk.css",
-    "static/js/main.003b7325.chunk.js"
+    "static/js/main.121e408f.chunk.js"
   ]
 }
