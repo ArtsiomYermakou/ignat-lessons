@@ -1,9 +1,9 @@
 import React, {ChangeEvent, useState} from "react";
 import EditableSpan from "../common/EditableSpan";
 import {Button} from "@material-ui/core";
-import Select from "../common/Select";
 import {v1} from "uuid";
 import Radio from "../common/Radio";
+import SelectI from "../common/Select";
 
 export type OptionValueType = {
     id: string
@@ -89,7 +89,7 @@ function Junior() {
             >SAVE</Button>
             <hr/>
             <div>
-                <Select optionValue={optionValue}
+                <SelectI optionValue={optionValue}
                         title={selected}
                         setSelected={setSelected}
                 />

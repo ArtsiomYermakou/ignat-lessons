@@ -8,7 +8,7 @@ type SelectType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTM
         title: string
     }
 
-const Select = (props: SelectType) => {
+const SelectI = (props: SelectType) => {
 
     const optionElement = props.optionValue.map(el => {
         return (
@@ -32,4 +32,4 @@ const Select = (props: SelectType) => {
 }
 
 
-export default Select;
+export default SelectI;
