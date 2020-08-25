@@ -4,6 +4,7 @@ import {Button} from "@material-ui/core";
 import {v1} from "uuid";
 import Radio from "../common/Radio";
 import SelectI from "../common/Select";
+import {filter18YearsAC, hwReducer, sortDownAc, sortUpAc, StateType} from "../state/homeWorkReducer";
 
 export type OptionValueType = {
     id: string
@@ -34,8 +35,16 @@ function Junior() {
             {id: v1(), name: 'radio', value: 'three', status: false},
             {id: v1(), name: 'radio', value: 'four', status: false},
             {id: v1(), name: 'radio', value: 'five', status: false},
+        ])
+    const [people, setPeople] = useState<Array<StateType>>([
+            {id: 1, name: "Artem", age: 21},
+            {id: 2, name: "Ksusha", age: 20},
+            {id: 3, name: "Misha", age: 4},
+            {id: 4, name: "Sasha", age: 74},
+            {id: 5, name: "Igor", age: 16},
         ]
     )
+
     const changeValueInput = (e: ChangeEvent<HTMLInputElement>) => {
         setValue(e.currentTarget.value)
     }
@@ -69,6 +78,10 @@ function Junior() {
         setRadio(newRadioArray);
     }
 
+    const SortUp = () => { setPeople(hwReducer(people, sortUpAc("up"))) }
+    const SortDown = () => { setPeople(hwReducer(people, sortDownAc("down"))) }
+    const Sort18YearsOld = () => { setPeople(hwReducer(people, filter18YearsAC(18))) }
+
     return (
         <div>
             <h1>Junior</h1>
@@ -89,11 +102,21 @@ function Junior() {
             >SAVE</Button>
             <hr/>
             <div>
+                <h3>Task 7</h3>
                 <SelectI optionValue={optionValue}
                         title={selected}
                         setSelected={setSelected}
                 />
                 <Radio radioArr={radio} changeStatus={changeStatus}/>
+            </div>
+            <hr />
+            <div>
+                <h3>task 8</h3>
+                {people.map( p =>
+                    <p key={p.id}>{p.name} : {p.age}</p>
+                )}
+                <Button color={"primary"} variant={"contained"} onClick={SortUp}>Sort Up</Button><Button variant={"contained"} color={"secondary"} onClick={SortDown}>Sort Down</Button><br/>
+                <Button variant={"outlined"} onClick={Sort18YearsOld}>Sort 18</Button>
             </div>
         </div>
     )
