@@ -13,7 +13,7 @@ const Radio = (props: RadioTypeProps) => {
         }
         return (
             <div key={c.id}>
-                <label htmlFor={c.id}>{c.value}</label>
+                <label >{c.value}</label>
                 <input type="radio"
                        value={c.value}
                        name={c.name}
