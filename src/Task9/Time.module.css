@@ -1,0 +1,14 @@
+.date {
+    padding: 20px;
+}
+.intervalId {
+    color: #6e9a9f;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+.date:hover{
+    color: crimson;
+}
+.fullDate:hover {
+    color: crimson;
+}
