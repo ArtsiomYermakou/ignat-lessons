@@ -29,14 +29,19 @@ const Timer = () => {
 
     return (
         <div>
-            <div>
-                <div className={s.fullDate}>{fullDate}</div>
-                <b><div className={s.date}>{date}</div></b>
+            <div className={s.holder}>
+                <div className={s.block}>{fullDate}</div>
+                <b>
+                    <div className={s.date}>{date}</div>
+                </b>
             </div>
-            <div className={s.intervalId}> Interval ID: <b>{timerId}</b> </div>
-            <Button color={"primary"} variant={"outlined"} onClick={startDateOnClick} size={"small"}>Start Timer</Button>
-            <Button color={"secondary"} variant={"outlined"} onClick={showTimer} size={"medium"}>Show Timer</Button>
-            <Button color={"primary"} variant={"outlined"} onClick={stopUpdate} size={"small"}>Stop Update</Button>
+            <div className={s.btn}>
+                <div className={s.intervalId}> Interval ID: <b>{timerId}</b></div>
+                <Button color={"primary"} variant={"outlined"} onClick={startDateOnClick} size={"small"}>Start
+                    Timer</Button>
+                <Button color={"secondary"} variant={"outlined"} onClick={showTimer} size={"medium"}>Show Timer</Button>
+                <Button color={"primary"} variant={"outlined"} onClick={stopUpdate} size={"small"}>Stop Update</Button>
+            </div>
         </div>
     )
 }
