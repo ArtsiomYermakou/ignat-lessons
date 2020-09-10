@@ -1,4 +1,4 @@
-export type StateType = {
+export type StateTypeReducer = {
     id: number
     name: string
     age: number
@@ -9,7 +9,7 @@ type ActionType = {
     payload: any
 }
 
-export const hwReducer = (state: Array<StateType>, action: ActionType): Array<StateType> => {
+export const hwReducer = (state: Array<StateTypeReducer>, action: ActionType): Array<StateTypeReducer> => {
     switch (action.type){
         case "SORT":{
             const copyState = [...state];
