@@ -11,6 +11,7 @@ import {RootStateType} from "../state/store";
 import {setLoadingAC, StateType} from "../state/loadingReducer";
 import Preloader from "../common/Preloader";
 import Loader from "../Task10/Loader";
+import Range from "../common/Range";
 
 export type OptionValueType = {
     id: string
@@ -153,6 +154,12 @@ function Junior() {
                         <h3>Task 10</h3>
                         <Loader startLoadingClickHandler={startLoadingClickHandler}/>
                     </div>
+                    <hr/>
+                    <div>
+                        <h3>Task 11</h3>
+                        <Range minValue={0} maxValue={100} step={1}/>
+                    </div>
+
                 </div>
             }
         </div>
