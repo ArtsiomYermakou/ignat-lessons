@@ -1,3 +1,5 @@
+import {ActionType} from "./store";
+
 const SET_LOADING = "SET_LOADING"
 
 export type StateType = {
@@ -8,12 +10,12 @@ const initialState: StateType = {
     loading: false
 }
 
-type setLoadingActionCreator = {
+export type setLoadingActionCreator = {
     type: "SET_LOADING"
     loading: boolean
 }
 
-type ActionType = setLoadingActionCreator;
+
 
 export const loadingReducer = (state: StateType = initialState, action: ActionType): StateType => {
     switch (action.type) {

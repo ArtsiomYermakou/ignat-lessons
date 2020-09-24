@@ -1,10 +1,14 @@
 import {combineReducers, createStore} from "redux";
-import {loadingReducer} from "./loadingReducer";
+import {loadingReducer, setLoadingActionCreator} from "./loadingReducer";
+import themeChangerReducer, {changerColorTheme} from "./themeChangerReducer";
 
 
 const RootReducer = combineReducers({
-    juniorPage: loadingReducer
+    juniorPage: loadingReducer,
+    juniorPlusPage: themeChangerReducer
 })
+
+export type ActionType = setLoadingActionCreator | changerColorTheme
 
 export const store = createStore(RootReducer);
 
