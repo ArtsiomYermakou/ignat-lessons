@@ -141,6 +141,10 @@ function Junior() {
                                 variant={"contained"}
                                 onClick={SortUp}>Sort Up</Button>
 
+                        <Button color={"secondary"}
+                                variant={"contained"}
+                                onClick={SortDown}>Sort Down</Button>
+
                         <Button variant={"outlined"}
                                 onClick={Sort18YearsOld}>Sort 18</Button>
                     </div>
