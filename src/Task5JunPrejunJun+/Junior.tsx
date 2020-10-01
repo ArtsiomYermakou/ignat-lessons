@@ -162,6 +162,7 @@ function Junior() {
                     <div>
                         <h3>Task 11</h3>
                         <Range minValue={0} maxValue={100} step={1}/>
+                        <Range minValue={0} maxValue={100} step={1}/>
                     </div>
 
                 </div>

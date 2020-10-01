@@ -5,6 +5,7 @@ import {RootStateType} from "../state/store";
 import {changerColorTheme} from "../state/themeChangerReducer";
 import styled, {ThemeProvider} from "styled-components";
 import ControlledOpenSelect from "../common/SelectMaterialUI";
+import Request from "../Task13/Request";
 
 export const backgroundColor = theme("theme", {
     Salmon: "#EE82EE",
@@ -49,10 +50,15 @@ function JuniorPlus() {
                 <ContainerStyled>
                     <h1>JuniorPlus</h1>
                     <div>
-                        <h3>Task 12</h3>
                         <div>
+                            <h3>Task 12</h3>
                             <ControlledOpenSelect optionArr={optionArr} value={changeTheme}
                                                   handleChange={handleChange} optionElement={optionElement}/>
+                        </div>
+                        <hr/>
+                        <div>
+                            <h3>Task 13</h3>
+                            <Request />
                         </div>
                     </div>
                 </ContainerStyled>
