@@ -2,6 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
 
+type PropsType = {
+    value: Array<number>
+}
+
 const useStyles = makeStyles({
     root: {
         width: 300,
@@ -10,13 +14,9 @@ const useStyles = makeStyles({
     },
 });
 
-function valuetext(value: number) {
-    return `${value}°C`;
-}
-
-export const RangeSlider = () => {
+export const RangeSlider = (props: PropsType) => {
     const classes = useStyles();
-    const [value, setValue] = React.useState<number[]>([20, 37]);
+    const [value, setValue] = React.useState<number[]>(props.value);
 
     const handleChange = (event: any, newValue: number | number[]) => {
         setValue(newValue as number[]);
@@ -28,8 +28,6 @@ export const RangeSlider = () => {
                 value={value}
                 onChange={handleChange}
                 valueLabelDisplay="auto"
-                aria-labelledby="range-slider"
-                getAriaValueText={valuetext}
             />
         </div>
     );

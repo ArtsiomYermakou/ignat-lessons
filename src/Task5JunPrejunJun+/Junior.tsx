@@ -163,7 +163,7 @@ function Junior() {
                     <div>
                         <h3>Task 11</h3>
                         <Range value={21} minValue={0} maxValue={100} step={1}/>
-                        <RangeSlider />
+                        <RangeSlider value={[20, 67]} />
                     </div>
                 </div>
             }
