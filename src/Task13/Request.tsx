@@ -15,9 +15,12 @@ const Request = () => {
     const sendRequest = () => {
         RequestAPI.requestPost(valueCheckbox)
             .then((res) => {
+                setValueError("")
                 setValueDone(res.statusText)
+
             })
             .catch((error) => {
+                setValueDone("")
                 setValueError(error.response.data.errorText)
             })
     }
