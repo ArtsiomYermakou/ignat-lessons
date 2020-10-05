@@ -1,10 +1,10 @@
-import React, {ChangeEvent, useEffect, useState} from "react";
+import React, {ChangeEvent, useState} from "react";
 import {Button, Checkbox} from "@material-ui/core";
 import {RequestAPI} from "./RequestAPI";
 
 const Request = () => {
 
-    const [valueCheckbox, setValueCheckbox] = useState(false)
+    const [valueCheckbox, setValueCheckbox] = useState<boolean>(false)
     const [valueDone, setValueDone] = useState("")
     const [valueError, setValueError] = useState("")
 
@@ -13,20 +13,14 @@ const Request = () => {
     }
 
     const sendRequest = () => {
-        setValueCheckbox(!valueCheckbox)
+        RequestAPI.requestPost(valueCheckbox)
+            .then((res) => {
+                setValueDone(res.statusText)
+            })
+            .catch((error) => {
+                setValueError(error.response.data.errorText)
+            })
     }
-
-    useEffect(() => {
-        if (valueCheckbox) {
-            RequestAPI.requestPost(valueCheckbox)
-                .then((res) => {
-                    setValueDone(res.statusText)
-                })
-                .catch((res) => {
-                    setValueError(res.message)
-                })
-        }
-    })
 
     return (
         <div>
