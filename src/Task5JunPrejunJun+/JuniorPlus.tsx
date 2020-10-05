@@ -31,15 +31,13 @@ function JuniorPlus() {
 
     const changeTheme = useSelector<RootStateType>(state => state.juniorPlusPage.color)
     const dispatch = useDispatch();
+
     const handleChange = (e: React.ChangeEvent<{ value: unknown }>) => {
-        if (e.currentTarget.value === "jet") {
-            dispatch(changerColorTheme("jet"))
-        } else if (e.currentTarget.value === "ming") {
-            dispatch(changerColorTheme("ming"))
-        } else if (e.currentTarget.value === 'indigo') {
-            dispatch(changerColorTheme('indigo'))
-        }
+
+        dispatch(changerColorTheme(e.currentTarget.value as string))
     }
+
+
 
     const optionElement = optionArr.map((el: any, i: number) => {
         return <option key={i} value={el.value}>{el.title}</option>
