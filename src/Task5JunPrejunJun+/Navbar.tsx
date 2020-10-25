@@ -6,7 +6,6 @@ import styles from './Navbar.module.css'
 
 
 function Navbar() {
-    // className={ styles.isActive ? styles.isActive : styles.link }
     return (
         <div className={styles.container}>
             <div className={styles.div}><NavLink activeClassName={styles.isActive} className={styles.link} to={"/prejunior"} >PreJunior</NavLink></div>

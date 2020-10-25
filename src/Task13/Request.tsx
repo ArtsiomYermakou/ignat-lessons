@@ -17,7 +17,6 @@ const Request = () => {
             .then((res) => {
                 setValueError("")
                 setValueDone(res.statusText)
-
             })
             .catch((error) => {
                 setValueDone("")

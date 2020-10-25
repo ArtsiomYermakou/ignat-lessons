@@ -27,7 +27,7 @@ function App () {
                 </label>
                 { isHidden && <Navbar/> }
                 <div>
-                    <Route path="/prejunior" component={PreJunior}/>
+                    <Route exact path="/prejunior" component={PreJunior}/>
                     <Route path="/junior" component={Junior}/>
                     <Route path="/juniorplus" component={JuniorPlus}/>
                 </div>
